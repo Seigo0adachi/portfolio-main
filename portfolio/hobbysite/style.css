@@ -1,0 +1,403 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nosifer&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Space Grotesk', sans-serif;
+  background: #fff;
+  color: #222;
+}
+
+.hobby-header {
+  text-align: center;
+  background-color: #fff;
+  z-index: 10;
+  position: relative;
+}
+
+.hobby-header h1 {
+  font-family: 'Staatliches', sans-serif;
+  font-size: 54px;
+  font-weight: normal;
+  letter-spacing: -1px;
+  word-spacing: -4px;
+  color: #d50606;
+  text-transform: uppercase;
+  padding: 60px 0;
+  margin: 0 auto;
+}
+
+.hobby-section {
+  min-height: 100vh;
+  padding: 60px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.music-section {
+  position: relative;
+  background-color: #000;
+  background-image: url("images/ChatGPT Image 2025年4月2日 23_03_13.png");
+  background-repeat: repeat;
+  background-size: contain;
+  padding: 80px 20px 100px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.music-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: inherit;
+  background-repeat: inherit;
+  background-size: inherit;
+  opacity: 0.9;
+  z-index: 0;
+}
+
+.music-section h2 {
+  color: #fff;
+  font-weight: 800;
+  font-size: 28px;
+  letter-spacing: -0.5px;
+  text-align: center;
+  z-index: 1;
+  position: relative;
+}
+
+.music-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 24px;
+  width: 100%;
+  margin: 40px auto 0;
+  padding: 0 16px;
+  box-sizing: border-box;
+}
+
+.iframe-wrapper {
+  display: inline-block;
+  line-height: 0;
+  border: 2px solid white;
+  border-radius: 12px;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+  height: 152px;
+  box-sizing: border-box;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.iframe-wrapper:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+}
+
+.iframe-wrapper iframe {
+  flex: 1;
+  width: 100%;
+  height: 152px;
+  border: none;
+  display: block;
+}
+
+.music-section * {
+  position: relative;
+  z-index: 1;
+}
+
+.music-commentary {
+  max-width: 800px;
+  margin: 20px auto 0;
+  padding: 0 20px;
+  color: #fff;
+  font-size: 20px;
+  line-height: 1.8;
+  z-index: 1;
+  position: relative;
+}
+
+.music-commentary p {
+  margin-bottom: 20px;
+}
+
+.music-content-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.other-section {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding-top: 40px !important;
+  background-attachment: fixed;
+  position: relative;
+  background-color: #000;
+  overflow: hidden;
+}
+
+.other-section h2 {
+  font-family: 'Nosifer', cursive;
+  font-size: 72px;
+  color: #8b0000;
+  text-align: center;
+  margin-bottom: 24px;
+  margin-top: -30px;
+  z-index: 1;
+  position: relative;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+  100% { transform: translateY(0); }
+}
+
+.other-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url('images/horror.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0;
+  filter: blur(6px) brightness(0.4);
+  transition: opacity 6s ease-in-out, filter 10s ease-in-out;
+  z-index: 0;
+}
+
+.other-section.visible::before {
+  opacity: 1;
+  filter: blur(0px) brightness(1);
+}
+
+.others-grid {
+  display: flex;
+  gap: 24px;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 1200px;
+  margin: 40px auto 0;
+  padding: 0 16px;
+  box-sizing: border-box;
+  position: relative;
+  cursor: pointer;
+}
+
+.others-item {
+  flex: 1 1 30%;
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  transition: none;
+  box-sizing: border-box;
+  min-width: 260px;
+}
+
+.others-item::after {
+  content: "▼クリックで詳細";
+  font-size: 12px;
+  color: #0077ff;
+  position: absolute;
+  right: 12px;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.others-item:hover::after {
+  opacity: 1;
+  color: #ffffff;
+}
+
+.others-item.gym, .others-item.soccer, .others-item.movie {
+  position: relative;
+  background-color: #fff;
+  color: #222;
+  overflow: hidden;
+}
+
+.others-item.gym:hover::before,
+.others-item.soccer:hover::before,
+.others-item.movie:hover::before {
+  opacity: 1;
+}
+
+.others-item.gym::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url('images/muscle.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  background-blend-mode: darken;
+}
+
+.others-item.soccer::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url('images/soccer.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  background-blend-mode: darken;
+}
+
+.others-item.movie::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url('images/movie.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  background-blend-mode: darken;
+}
+
+.others-item h3 {
+  margin-top: 0;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.others-item p {
+  font-size: 16px;
+  line-height: 1.75;
+  margin: 0;
+}
+
+.text-box {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 16px;
+  border-radius: 8px;
+  color: #fff;
+  text-shadow: none;
+  backdrop-filter: blur(2px);
+  position: relative;
+  z-index: 1;
+}
+
+.hover-list,
+.details,
+.others-item ul {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, opacity 0.4s ease;
+  padding-left: 1em;
+  margin-top: 10px;
+  color: #fff;
+  font-size: 14px;
+  list-style: disc;
+  opacity: 0;
+}
+
+.hover-list.open,
+.others-item.active .details,
+.others-item.active ul {
+  max-height: 300px;
+  opacity: 1;
+}
+
+.others-item .click-hint::after {
+  content: " ▼";
+}
+
+.others-item.active .click-hint::after {
+  content: " ▲";
+}
+
+.site-footer {
+  background-color: #111;
+  color: #eaeaea;
+  text-align: center;
+  padding: 40px 20px;
+  font-size: 14px;
+  font-family: 'Space Grotesk', sans-serif;
+  position: relative;
+  z-index: 1;
+  border-top: 2px solid #820000;
+}
+
+.site-footer p {
+  margin: 8px 0;
+}
+
+.footer-message {
+  font-family: 'Nosifer', cursive;
+  font-size: 20px;
+  color: #820000;
+  animation: flicker 2.5s infinite alternate;
+}
+
+@keyframes flicker {
+  0%   { opacity: 1; }
+  45%  { opacity: 0.3; }
+  55%  { opacity: 1; }
+  60%  { opacity: 0.5; }
+  100% { opacity: 1; }
+}
+
+@media (max-width: 900px) {
+  .music-content-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .music-commentary {
+    margin: 20px auto 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .others-grid {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .others-item {
+    width: 100%;
+  }
+
+  .others-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .music-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .others-item.gym .text-box {
+    text-align: center;
+    padding: 20px;
+  }
+}

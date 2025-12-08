@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SEIGO ADACHI | Frontend Developer</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="intro">
+      <h1><span id="typewriter"></span><span class="cursor"></span></h1>
+    </div>
+
+    <div id="fixedHeader" class="fixed-header">
+      <span class="logo">SEIGO ADACHI<span class="cursor"></span></span>
+      <nav class="grid-nav">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#qualifications">Qualifications</a>
+        <a href="#materials">Learning</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+
+    <main>
+      <section id="about">
+        <h2>About</h2>
+        <p>
+          現在フロントエンドエンジニアを目指して学習中です。HTML/CSSやJavaScriptを中心に独学で取り組んでおり、これからTypeScriptやNext.jsなどの技術も習得していきます。
+        </p>
+      </section>
+
+      <section id="projects">
+        <h2>Projects</h2>
+        <p>
+          ここに自身で制作したWebアプリケーションやサイトの紹介を追加していきます。
+        </p>
+        <ul>
+          <li>
+            <a
+              href="https://seigo0adachi.github.io/Hobbysite/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >趣味紹介サイト</a
+            >
+          </li>
+          <li>
+            <a
+              href="http://seigo0adachi.github.io/my-music-gallery/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >音楽ギャラリーサイト</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://adorable-cannoli-d522c2.netlify.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >なぞって距離測定「distance-measurement-app」</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://amazon-rundom-item.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >amazonの商品をランダムガチャ。amazonルーレット</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://kosotsu-dev.github.io/Dot-animation/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >ドットアニメーション</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://tel-plus.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >電話帳プラス フレンドの電話対応状況を共有するアプリ</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://music-library-rouge.vercel.app"
+              target="_blank"
+              rel="noopener noreferrer"
+              >MUSIC LIBRARY 自分の好きな音楽をフレンドと共有するアプリ</a
+            >
+          </li>
+            new↑
+        </ul>
+      </section>
+
+      <section id="skills">
+        <h2>Skills</h2>
+        <ul>
+          <li>
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+              class="skill-icon"
+              alt="HTML"
+            />
+            HTML / CSS
+          </li>
+          <li>
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+              class="skill-icon"
+              alt="JavaScript"
+            />
+            JavaScript
+          </li>
+          <li>
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
+              class="skill-icon"
+              alt="Git"
+            />
+            Git / GitHub
+          </li>
+        </ul>
+        <p>
+          これからTypeScriptやNext.jsなど、さまざまな技術を積極的に習得していく予定です。
+        </p>
+      </section>
+
+      <section id="qualifications">
+        <h2>Qualifications</h2>
+        <ul>
+          <li>HTML5プロフェッショナル認定 レベル1</li>
+          <li>その他、今後取得予定の資格を追加予定</li>
+        </ul>
+      </section>
+
+      <section id="materials">
+        <h2>Learning Materials</h2>
+        <ul>
+          <li>Progate</li>
+          <li>Udemy</li>
+          <li>etc.</li>
+        </ul>
+      </section>
+
+      <section id="contact">
+        <h2>Contact</h2>
+        <p>
+          GitHub
+          <li>
+            <a
+              href="https://github.com/Seigo0adachi"
+              target="_blank"
+              rel="noopener noreferrer"
+              >https://github.com/Seigo0adachi</a
+            >（個人用）
+          </li>
+          <li>
+            <a
+              href="https://github.com/KOSOTSU-dev"
+              target="_blank"
+              rel="noopener noreferrer"
+              >https://github.com/KOSOTSU-dev</a
+            >（発信用）
+          </li>
+        </p>
+        <p>Email: qingwuzuli71@gmail.com</p>
+        <p>
+          Qiita:<a
+            href="https://qiita.com/KOSOTSU"
+            target="_blank"
+            rel="noopener noreferrer"
+            >https://qiita.com/KOSOTSU</a
+          >
+        </p>
+      </section>
+    </main>
+
+    <script>
+      const text = "SEIGO ADACHI";
+      const target = document.getElementById("typewriter");
+      const mainContent = document.querySelector("main");
+      const intro = document.getElementById("intro");
+      const fixedHeader = document.getElementById("fixedHeader");
+      let timeoutId;
+
+      function type() {
+        clearTimeout(timeoutId);
+        target.textContent = "";
+        let index = 0;
+
+        function typingLoop() {
+          if (index < text.length) {
+            target.textContent += text[index];
+            index++;
+            timeoutId = setTimeout(typingLoop, 200);
+          } else {
+            setTimeout(() => {
+              intro.classList.add("slide-up");
+              mainContent.classList.add("visible");
+              fixedHeader.classList.add("visible");
+              document.body.style.overflow = "auto";
+            }, 500);
+          }
+        }
+
+        typingLoop();
+      }
+
+      window.addEventListener("DOMContentLoaded", type);
+      document.querySelector("#intro h1").addEventListener("mouseenter", type);
+
+      // ✅ ナビクリックで中央スクロール＆highlight追加
+      document.querySelectorAll("nav a").forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const targetId = this.getAttribute("href");
+          const targetEl = document.querySelector(targetId);
+          if (targetEl) {
+            const rect = targetEl.getBoundingClientRect();
+            const scrollTop =
+              window.scrollY || document.documentElement.scrollTop;
+            const offset =
+              scrollTop + rect.top - window.innerHeight / 2 + rect.height / 2;
+
+            window.scrollTo({
+              top: offset,
+              behavior: "smooth",
+            });
+
+            // 🔥 ハイライトを一瞬つける
+            targetEl.classList.add("highlight");
+            setTimeout(() => {
+              targetEl.classList.remove("highlight");
+            }, 800);
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hobbies | SEIGO ADACHI</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <script>
+    window.addEventListener("DOMContentLoaded", () => {
+      const othersItems = document.querySelectorAll(".others-item");
+
+      othersItems.forEach((item) => {
+        item.addEventListener("click", () => {
+          const allLists = document.querySelectorAll(".hover-list");
+          allLists.forEach((list) => {
+            list.classList.add("open");
+          });
+        });
+      });
+    });
+  </script>
+
+  <body>
+    <header class="hobby-header">
+      <h1>HOBBIES OF SEIGO ADACHI</h1>
+    </header>
+
+    <section class="hobby-section music-section">
+      <h2>MUSIC</h2>
+      <div class="music-content-wrapper">
+        <div class="music-grid">
+          <div class="iframe-wrapper">
+            <iframe
+              src="https://open.spotify.com/embed/track/5BebqkBndVuST8jX9UWPqI?utm_source=generator"
+              width="100%"
+              height="152"
+              frameborder="0"
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+              loading="lazy"
+            ></iframe>
+          </div>
+          <div class="iframe-wrapper">
+            <iframe
+              src="https://open.spotify.com/embed/track/5WfSHn8qVk1W3GJJQpETC1?utm_source=generator"
+              width="100%"
+              height="152"
+              frameborder="0"
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+              loading="lazy"
+            ></iframe>
+          </div>
+          <div class="iframe-wrapper">
+            <iframe
+              src="https://open.spotify.com/embed/track/1W5XugQJGhnSATMI5n002M?utm_source=generator"
+              width="100%"
+              height="152"
+              frameborder="0"
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+              loading="lazy"
+            ></iframe>
+          </div>
+          <div class="iframe-wrapper">
+            <iframe
+              src="https://open.spotify.com/embed/track/39VWOmm7PV77cJs8yQ5wn7?utm_source=generator"
+              width="100%"
+              height="152"
+              frameborder="0"
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+              loading="lazy"
+            ></iframe>
+          </div>
+          <div class="iframe-wrapper">
+            <iframe
+              src="https://open.spotify.com/embed/track/4K7zcW2YEOYfxxceNU2yl8?utm_source=generator"
+              width="100%"
+              height="152"
+              frameborder="0"
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+              loading="lazy"
+            ></iframe>
+          </div>
+        </div>
+        <div class="music-commentary">
+          <p>
+            私が惹かれる音楽には、いつも「何者かになろうとする衝動」と「その裏にある不安」が潜んでいます。David
+            Bowieの「Star」や「Word on a
+            Wing」は、夢と自己葛藤が同居する楽曲ですし、Radioheadの「Idioteque」には現代的な不安が、YMOの「マッドピエロ」には機械仕掛けの狂気が滲んでいます。THE
+            YELLOW
+            MONKEYの「甘い経験」もまた、“大人を演じる”少年の姿が見えるような不安定さを感じます。
+          </p>
+          <p>
+            単なるポップさやキャッチーさよりも、どこかジャンルの境界を飛び越えていて、演じること／変身することを内包した楽曲に強く惹かれます。サウンドの質感やアレンジの工夫に敏感で、感情の表現がストレートではなく、少しねじれている音楽に居心地のよさを感じます。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="hobby-section other-section">
+      <h2>OTHERS</h2>
+      <div class="others-grid">
+        <div class="others-item gym" onclick="toggleDetails(this)">
+          <div class="text-box">
+            <h3>ジム</h3>
+            <p>
+              まだまだ初心者ですが週2〜3回ペースで通っています。体がデカくなっていく感覚が気持ち良く、ハマっています。
+            </p>
+            <div class="click-hint">好きな種目</div>
+            <ul class="details">
+              <li>ベンチプレス</li>
+              <li>チンニング</li>
+              <li>レッグプレス</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="others-item soccer" onclick="toggleDetails(this)">
+          <div class="text-box">
+            <h3>サッカー</h3>
+            <p>
+              小学生の頃から続けているライフワーク。週末に社会人チームの活動も行っています。好きな選手はファンダイク。
+            </p>
+            <div class="click-hint">好きな選手</div>
+            <ul class="details">
+              <li>エジル</li>
+              <li>デブライネ</li>
+              <li>チアゴ</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="others-item movie" onclick="toggleDetails(this)">
+          <div class="text-box">
+            <h3>映画</h3>
+            <p>
+              ジャンル関係なく色々みます。比較的ホラーやヒューマンドラマが好きです。最近見て面白かったのは"怪物"です。
+            </p>
+            <div class="click-hint">好きな映画</div>
+            <ul class="details">
+              <li>sawシリーズ</li>
+              <li>セッション</li>
+              <li>ストレンジャーシングス(ドラマ)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <p>&copy; 2025 SEIGO ADACHI</p>
+      <p class="footer-message">Thanks for visiting... 👁️</p>
+    </footer>
+    <!-- JavaScript -->
+    <script>
+      window.addEventListener("DOMContentLoaded", () => {
+        const othersItems = document.querySelectorAll(".others-item");
+        othersItems.forEach((item) => {
+          item.addEventListener("click", () => {
+            const allLists = document.querySelectorAll(".hover-list");
+            allLists.forEach((list) => {
+              list.classList.add("open");
+            });
+          });
+        });
+      });
+      function toggleDetails(clickedItem) {
+        const allItems = document.querySelectorAll(".others-item");
+        allItems.forEach((item) => {
+          if (item === clickedItem) {
+            item.classList.toggle("active");
+          } else {
+            item.classList.remove("active");
+          }
+        });
+      }
+      window.addEventListener("scroll", () => {
+        const otherSection = document.querySelector(".other-section");
+        const sectionTop = otherSection.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+
+        if (sectionTop < windowHeight * 0.8) {
+          otherSection.classList.add("visible");
+        } else {
+          otherSection.classList.remove("visible");
+        }
+      });
+    </script>
+  </body>
+
+
+</html>
